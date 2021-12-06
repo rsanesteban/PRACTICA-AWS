@@ -71,6 +71,7 @@ get_messages:
             parameters:
               paths:
                 chat_id: true
+                
   send_message:
     handler: handler.send_message
     events:
