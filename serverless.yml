@@ -1,4 +1,5 @@
 service: practica-aws
+app: practica-aws
 
 frameworkVersion: ">=2.24.0"
 
