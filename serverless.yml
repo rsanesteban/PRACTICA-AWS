@@ -72,7 +72,7 @@ get_messages:
               paths:
                 chat_id: true
                 
-  send_message:
+send_message:
     handler: handler.send_message
     events:
       - http:
