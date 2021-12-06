@@ -1,4 +1,4 @@
-service: serverless-rest-api-with-dynamodb
+service: practica-aws
 
 frameworkVersion: ">=2.24.0"
 
