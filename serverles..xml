@@ -61,6 +61,27 @@ functions:
           method: delete
           cors: true
 
+get_messages:
+    handler: handler.get_messages
+    events:
+      - http:
+          path: /{chat_id}
+          method: get
+          request:
+            parameters:
+              paths:
+                chat_id: true
+  send_message:
+    handler: handler.send_message
+    events:
+      - http:
+          path: /{chat_id}
+          method: post
+          request:
+            parameters:
+              paths:
+                chat_id: true
+
 resources:
   Resources:
     TodosDynamoDbTable:
