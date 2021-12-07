@@ -17,7 +17,7 @@ def update(event, context):
 
     timestamp = int(time.time() * 1000)
 
-    table = dynamodb.Table(os.environ['DYNAMODB_TABLE'])
+    table = dynamodb.Table(os.environ['anuncios'])
 
     # update the todo in the database
     result = table.update_item(
