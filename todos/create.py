@@ -16,7 +16,7 @@ def create(event, context):
     
     timestamp = str(time.time())
 
-    table = dynamodb.Table(os.environ['DYNAMODB_TABLE'])
+    table = dynamodb.Table(os.environ['anuncios'])
 
     item = {
         'id': str(uuid.uuid1()),
