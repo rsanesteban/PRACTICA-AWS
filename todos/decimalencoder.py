@@ -7,7 +7,7 @@ dynamodb = boto3.resource('dynamodb')
 
 
 def get(event, context):
-    table = dynamodb.Table(os.environ['DYNAMODB_TABLE'])
+    table = dynamodb.Table(os.environ['anuncios'])
 
     # fetch todo from the database
     result = table.get_item(
