@@ -7,7 +7,7 @@ dynamodb = boto3.resource('dynamodb')
 
 
 def list(event, context):
-    table = dynamodb.Table(os.environ['DYNAMODB_TABLE'])
+    table = dynamodb.Table(os.environ['anuncios'])
 
     # fetch all todos from the database
     result = table.scan()
