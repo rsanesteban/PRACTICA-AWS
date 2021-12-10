@@ -9,7 +9,7 @@ provider:
   lambdaHashingVersion: '20201221'
   environment:
     DYNAMODB_TABLE: ${self:service}-${opt:stage, self:provider.stage}
-  iamrolestatements:
+  iamRoleStatements:
         - Effect: Allow
           Action:
             - dynamodb:Query
