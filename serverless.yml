@@ -8,7 +8,7 @@ provider:
   runtime: python3.8
   lambdaHashingVersion: '20201221'
   environment:
-    DYNAMODB_TABLE: ${self:service}-${opt:stage, self:provider.stage}
+    DYNAMODB_ADVERT_TABLE: ${self:service}-${opt:stage, self:provider.stage}--advert
   iamRoleStatements:
         - Effect: Allow
           Action:
@@ -100,4 +100,4 @@ resources:
         ProvisionedThroughput:
           ReadCapacityUnits: 1
           WriteCapacityUnits: 1
-        TableName: ${self:provider.environment.DYNAMODB_TABLE}
+        TableName: ${self:provider.environment.DYNAMODB_ADVERT_TABLE}
