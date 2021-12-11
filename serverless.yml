@@ -19,14 +19,14 @@ provider:
             - dynamodb:UpdateItem
             - dynamodb:DeleteItem
           Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.DYNAMODB_ADVERT_TABLE}"
+          
     DYNAMODB_MESSAGES_TABLE: simple-chat-messages
   iamRoleStatements:
-    - Effect: "Allow"
-      Action:
-        - dynamodb:Query
-        - dynamodb:PutItem
-      Resource:
-        - "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.DYNAMODB_MESSAGES_TABLE}"
+        - Effect: "Allow"
+          Action:
+            - dynamodb:Query
+            - dynamodb:PutItem
+          Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.DYNAMODB_MESSAGES_TABLE}"
 
 functions:
   create:
